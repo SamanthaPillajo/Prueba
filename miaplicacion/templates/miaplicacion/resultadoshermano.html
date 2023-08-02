@@ -1,0 +1,29 @@
+{% extends 'miaplicacion/inicio.html' %}
+{% load static %}
+
+{% block cabecera %}
+Hermanos {{ hermano }}
+{% endblock cabecera %}
+    
+{% block contenido %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Comision</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hermano in hermanos %}
+        <tr>
+            <td>{{ hermano.id }}</td>
+            <td>{{ hermano.nombre }}</td>
+            <td>{{ hermano.edad }}</td>
+            <td>{{ hermano.fechanacimiento }}</td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}
