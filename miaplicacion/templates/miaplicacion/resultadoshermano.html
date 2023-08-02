@@ -11,19 +11,21 @@ Hermanos {{ hermano }}
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Comision</th>
+                <th>Edad</th>
+                <th>Fecha de Nacimiento</th>
             </tr>
         </thead>
         <tbody>
-        {% for hermano in hermanos %}
-        <tr>
-            <td>{{ hermano.id }}</td>
-            <td>{{ hermano.nombre }}</td>
-            <td>{{ hermano.edad }}</td>
-            <td>{{ hermano.fechanacimiento }}</td>
-
-        </tr>
-        {% endfor %}
+            {% for hermano in hermanos %}
+            <tr>
+                <td>{{ hermano.id }}</td>
+                <td>{{ hermano.nombreapellido }}</td>
+                <td>{{ hermano.edad }}</td>
+                <td>{{ hermano.fechanacimiento }}</td>
+    
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
 {% endblock contenido %}
+
